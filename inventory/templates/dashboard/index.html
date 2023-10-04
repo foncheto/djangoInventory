@@ -1,5 +1,5 @@
 {% extends 'partials/base.html' %}
-{% block title %} Home Page {% endblock %}
+{% block title %} Inicio {% endblock %}
 {% block content %}
 
 {% if user.is_authenticated and user.is_staff and user.is_superuser %}
@@ -17,7 +17,7 @@
                         data: {
                             labels: [{% for order in orders %} '{{ order.product.name }}', {% endfor %}],
                     datasets: [{
-                        label: 'Orders',
+                        label: 'Ordenes',
                         data: [{% for order in orders %} {{ order.order_quantity }}, {% endfor %}],
                         backgroundColor: [
                             'rgba(255, 99, 132, 1)',
@@ -61,7 +61,7 @@
                         data: {
                             labels: [{% for product in products %} '{{ product.name }}', {% endfor %}],
                     datasets: [{
-                        label: 'Products',
+                        label: 'Productos',
                         data: [{% for product in products %} {{ product.quantity }}, {% endfor %}],
                         backgroundColor: [
                             'rgba(255, 99, 132, 1)',

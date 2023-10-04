@@ -6,15 +6,15 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div class="border bg-white p-3">
-                <h3>Delete Item</h3>
+                <h3>Eliminar Item</h3>
                 <hr>
                 <div class="alert alert-danger">
-                    <h4>Are you sure you want to delete {{ item.name }}?</h4>
+                    <h4>Estas seguro que quieres eliminar {{ item.name }}?</h4>
                 </div>
                 <form method="POST">
                     {% csrf_token %}
                     {{ form }}
-                    <a class="btn btn-secondary" href="{% url 'dashboard-product' %}">Cancel</a>
+                    <a class="btn btn-secondary" href="{% url 'dashboard-product' %}">Cancelar</a>
                     <input class="btn btn-danger" type="submit" value="Delete">
                 </form>
             </div>

@@ -16,13 +16,13 @@
             {% endfor %}
             {% endif %}
             <div class="border p-3 bg-white">
-                <h3>Login Page</h3>
+                <h3>Login</h3>
                 <hr>
                 <form method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button type="submit" class="btn btn-success">Login</button>
-                    <a class="mx-4" href="{% url 'password_reset' %}">Forgot Password?</a>
+                    <a class="mx-4" href="{% url 'password_reset' %}">Olvidaste tu Contraseña?</a>
                 </form>
             </div>
         </div>
