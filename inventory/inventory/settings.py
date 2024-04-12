@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
 import json
 
 with open("../credentials.json") as f:
-    secrets = json.loads(f.read())
-    email = secrets["mail"]
-    password = secrets["password"]
+    email = "alo@gmail.com"
+    password = "12345678"
 
 from pathlib import Path
 
